@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 app.use(express.static("frontend"))
-app.use("/add",function(req,res){
+app.all("/add",function(req,res){
     var first=req.query.firstNumber
     var second=req.query.secondNumber
     var ans=parseInt(first)+parseInt(second)
